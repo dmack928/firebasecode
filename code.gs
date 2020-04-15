@@ -767,14 +767,14 @@ if(!isLR){var docid = DriveApp.getFileById(globalVariables().RPRTtemplate).makeC
           Logger.log('Error in data location switch');
           return 666;
       }
-// var emailStr = (function (){
-//    var str = "";
-//    for(var i = 0; i < emailTo.length; i++){
-//      str = str + String.fromCharCode(44) + emailTo[i];}
-//     return str;})();
+var emailStr = (function (){
+   var str = "";
+   for(var i = 0; i < emailTo.length; i++){
+     str = str + String.fromCharCode(44) + emailTo[i];}
+    return str;})();
 
         var folder = DriveApp.getFolderById(data[1].pjId);
-     // Logger.log("emailTo: "+emailStr);
+     Logger.log("emailTo: "+emailStr);
      var attach = {
        fileName,
        content: .pdf,
